@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    	<img src='forest.jpg' alt='forest' id='forest' width="100px" height="100px">
+        <main>
+        	<h1>AGE CALCULATOR</h1>
+        	<h2>To calculate you're age, please click on "Enter birth year" button and submit birth year.</h2>
+        	<div class="btn">
+            <button onclick="getYear()">
+                <span>Enter birth year</span>
+                <div></div>
+            </button>
+
+            <button onclick="reset()">
+                <span>Reset</span>
+                <div></div>
+            </button>
+            </div>
+
+            <div class="show_year">
+            	<p class="year"></p>
+            </div>
+        </main>
+        <div class="support">
+            <a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribbble"></i></a>
+        </div>
+        
+        <script>
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                const div = button.querySelector('div');
+                ['mouseenter', 'mouseleave'].forEach((event)=>{
+                    button.addEventListener(event, (e)=>{
+                        div.style.left = `${e.offsetX}px`;
+                        div.style.top = `${e.offsetY}px`; 
+                    });
+                });
+            });
+
+            function getYear(){
+            	var year = prompt('Please enter the year you were born');
+            	if (year !== null){
+            		d = new Date();
+            		n = d.getFullYear();
+            		document.querySelector('.year').innerHTML = 'You are ' +(n - year)+ ' years old!';
+            	};
+            };
+
+            function reset(){
+            	var elem = document.querySelector('.year');
+            	elem.innerHTML = '';
+            }
+        </script>
+    </body>
+</html>
