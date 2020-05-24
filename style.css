@@ -25,7 +25,7 @@ main{
 	align-items: center;
 	padding-top: 40px;
 	font-family: arial;
-	color: #FEE440;
+	color: rgb(37, 37, 31);
 	border-radius: 5px;
 	top: 50%;
 	left: 50%;
@@ -71,13 +71,13 @@ button {
 	background: none;
 }
 button:nth-child(1) {
-	background: rgb(245, 214, 214);
-    color: rgb(228, 37, 12);
+	background: rgb(228, 224, 224);
+    color: rgb(12, 228, 120);
   
 }
 button:nth-child(2) {
-	color: rgb(228, 37, 12);
-	border: 2px solid rgb(228, 37, 12);
+	color: rgb(12,228,120);
+	border: 2px solid rgb(12,228,120);
 }
 
 button span {
@@ -93,7 +93,7 @@ button div {
 		top: 0;
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
-		background: rgb(228, 37, 12);
+		background: rgb(12,228,120);
 		clip-path: circle(0% at 50% 50%);
 		transition: clip-path 500ms ease;
 		z-index: 1;
